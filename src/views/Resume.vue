@@ -11,7 +11,7 @@
       </h2>
 
       <!-- Educación, Experiencia, Awards -->
-      <div class="grid md:grid-cols-3 gap-6 mb-16">
+      <div class="grid md:grid-cols-3 gap-6 mb-2">
     
         <!-- Experience -->
         <div>

@@ -120,19 +120,19 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
-            <span>Contact</span>
+            <span>Contacto</span>
           </router-link>
         </li>
 
         <!-- Toggle tema -->
-        <li>
+        <!-- <li>
           <button class="px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.657-7.657l1.414 1.414M4.929 19.071l1.414-1.414m12.728 0l-1.414-1.414M6.343 4.343L4.929 5.757M12 8a4 4 0 100 8 4 4 0 000-8z"/>
             </svg>
           </button>
-        </li>
+        </li> -->
       </ul>
     </nav>
 
