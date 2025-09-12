@@ -20,7 +20,7 @@
                 </svg>
             </a> -->
             <!-- Github -->
-            <a href="#" class="text-orange-500 hover:text-white w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-teal-600 rounded-lg">
+            <a href="https://github.com/UlisesMercer9" target="_blank" class="text-orange-500 hover:text-white w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-teal-600 rounded-lg">
                 <svg class="size-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
                     fill-rule="evenodd"
@@ -30,7 +30,7 @@
                 </svg>
             </a>
             <!-- LinkedIn -->
-            <a href="#" class="text-sky-400 hover:text-white w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-teal-600 rounded-lg">
+            <a href="https://www.linkedin.com/in/ulises-rodr%C3%ADguez/" target="_blank" class="text-sky-400 hover:text-white w-10 h-10 flex items-center justify-center bg-gray-800 hover:bg-teal-600 rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M19 0h-14a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM7 19H4V9h3v10zM5.5 7.5A1.75 1.75 0 115.5 4a1.75 1.75 0 010 3.5zM20 19h-3v-5.6c0-1.4-.5-2.4-1.7-2.4s-2 .9-2.3 1.8c-.1.2-.1.5-.1.8V19h-3V9h3v1.4c.4-.6 1.3-1.4 3-1.4 2.2 0 4 1.4 4 4.6V19z"/>
                 </svg>
