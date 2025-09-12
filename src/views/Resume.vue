@@ -1,7 +1,7 @@
 <!-- src/views/Resume.vue -->
 <template>
   <section class="bg-black text-white py-16 px-6  justify-center">
-    <div class="max-w-6xl w-full rounded-t-2xl shadow-lg p-10 " style="background-color: #101010;">
+    <div class="max-w-6xl w-full rounded-t-2xl shadow-lg p-10 bg-[#101010]">
 
       <!-- Título -->
       <h2 class="text-3xl font-bold inline-block pb-1 mb-10 
@@ -24,17 +24,17 @@
             Experiencia
           </h3>
           <div class="space-y-8">
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600" >
               <p class="text-gray-400 text-sm">2021 - Presente</p>
               <h4 class="font-bold text-white">Desarrollador Full-Stack</h4>
               <p class="text-gray-400 text-sm">Binnacle App.</p>
             </div>
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600">
               <p class="text-gray-400 text-sm">2020 - 2021</p>
               <h4 class="font-bold text-white">Desarrollador Full-Stack</h4>
               <p class="text-gray-400 text-sm">Bolsa Rosa.</p>
             </div>
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600">
               <p class="text-gray-400 text-sm">2019 - 2020</p>
               <h4 class="font-bold text-white">Desarrolador Front-End</h4>
               <p class="text-gray-400 text-sm">Minds Innovation.</p>
@@ -55,12 +55,12 @@
             Educación
           </h3>
           <div class="space-y-4">
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600">
               <p class="text-gray-400 text-sm">2017-2019</p>
               <h4 class="font-bold text-white">Maestro en Sistemas Computacionales</h4>
               <p class="text-gray-400 text-sm">Instituto Tecnólogico Superior de Misantla, Misantla, Ver</p>
             </div>
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600">
               <p class="text-gray-400 text-sm">2012 - 2017</p>
               <h4 class="font-bold text-white">Ing. en Tecnologías de la Información y Comunicación</h4>
               <p class="text-gray-400 text-sm">Instituto Tecnólogico Superior de Misantla, Misantla, Ver</p>
@@ -79,7 +79,7 @@
             Logros
           </h3>
           <div class="space-y-4">
-            <div class="p-4 rounded-xl border text-zinc-600">
+            <div class="p-4 rounded-xl border border-gray-700 text-zinc-600">
               <p class="text-gray-400 text-sm">12 Abril 2021</p>
               <h4 class="font-bold text-white">
                 <a href="https://www.mdpi.com/2071-1050/13/8/4285" target="_blank">
@@ -92,7 +92,7 @@
         </div>
       </div>
     </div>
-    <div class="max-w-6xl w-full rounded-b-2xl shadow-lg p-10" style="background-color: #0d0d0d;">
+    <div class="max-w-6xl w-full rounded-b-2xl shadow-lg p-10 bg-[#0d0d0d]">
       <!-- Skills y Knowledge -->
       <div class="grid md:grid-cols-2 gap-10">
         <!-- Working Skills -->
@@ -149,18 +149,19 @@ import { ref } from "vue";
 
 const skills = ref([
   "JavaScript",
-  "VueJs",
+  "VueJS",
   "Quasar Framework",
   "PHP",
   "Laravel",
-  "MySql",
+  "MySQL",
   "HTML5",
   "CSS3",
   "TailwindCSS",
   "Bootstrap",
-  "Git/Github",
+  "Git/GitHub",
   "Principios SOLID",
-  "TypeScript"
+  "TypeScript",
+  "Python"
 ]);
 </script>
 

@@ -1,18 +1,16 @@
 <!-- src/views/Contact.vue -->
 <template>
-  <section class="bg-black text-white md:py-16 px-6 flex justify-center">
-    <div class="max-w-6xl w-full rounded-2xl shadow-lg md:py-24 md:px-20" style="background-color: #101010;">
+  <section class="bg-black text-white py-16 px-6 justify-center">
+    <div class="max-w-6xl w-full rounded-2xl shadow-lg p-10 bg-[#101010]">
 
-      <!-- 🔹 Encabezado global (alineado a la izquierda) -->
-      <h2
-        class="text-3xl font-bold inline-block pb-1 mb-10 
-               border-b-4 border-transparent 
-               bg-gradient-to-r from-teal-500 to-green-700 
-               bg-[length:100%_4px] bg-no-repeat bg-bottom">
+      <!-- Título -->
+      <h2 class="text-3xl font-bold inline-block pb-1 mb-10 
+          border-b-4 border-transparent 
+          bg-gradient-to-r from-teal-500 to-green-700 bg-[length:100%_4px] bg-no-repeat bg-bottom">
         Contacto
       </h2>
 
-      <!-- 🔹 Grid de 2 columnas -->
+      <!-- Contenedor principal -->
       <div class="grid grid-cols-1 md:grid-cols-3 md:gap-8">
 
         <!-- Columna izquierda: Info -->
@@ -53,7 +51,7 @@
         </div>
 
         <!-- Columna derecha: Formulario -->
-        <div class="bg-gray-900 text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10" style="background-color: #101010;">
+        <div class="bg-[#101010] text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10 md:mb-0 mb-5">
           <p class="text-lg mb-8 text-white">
             Siempre estoy abierto a discutir <span class="font-bold">trabajos o asociaciones de diseño de productos.</span>
           </p>
@@ -81,6 +79,7 @@
           </form>
         </div>
       </div>
+
     </div>
   </section>
 </template>
