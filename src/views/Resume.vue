@@ -33,7 +33,7 @@
                 class="mb-8 ml-6"
               >
                 <span
-                  class="absolute -left-[9px] flex items-center justify-center w-5 h-5 bg-teal-500 rounded-full ring-4 ring-[#101010]"
+                  class="absolute -left-[9px] flex items-center justify-center w-5 h-5 bg-gradient-to-r from-teal-500 to-green-700 rounded-full ring-4 ring-[#101010]"
                 ></span>
                 <p class="text-gray-400 text-sm">{{ job.period }}</p>
                 <h4 class="font-bold text-white">{{ job.role }}</h4>
@@ -60,7 +60,7 @@
                 class="mb-8 ml-6"
               >
                 <span
-                  class="absolute -left-[9px] flex items-center justify-center w-5 h-5 bg-teal-500 rounded-full ring-4 ring-[#101010]"
+                  class="absolute -left-[9px] flex items-center justify-center w-5 h-5 bg-gradient-to-r from-teal-500 to-green-700 rounded-full ring-4 ring-[#101010]"
                 ></span>
                 <p class="text-gray-400 text-sm">{{ edu.period }}</p>
                 <h4 class="font-bold text-white">{{ edu.degree }}</h4>
@@ -78,18 +78,23 @@
               </svg>
               Logros
             </h3>
-            <div
-              v-for="(award, index) in awards"
-              :key="index"
-              class="p-4 mb-6 rounded-xl border border-gray-700 hover:border-teal-500 transition-colors duration-300"
-            >
-              <p class="text-gray-400 text-sm">{{ award.date }}</p>
-              <h4 class="font-bold text-white">
-                <a :href="award.link" target="_blank" class="hover:text-teal-400 transition-colors">
-                  {{ award.title }}
-                </a>
-              </h4>
-              <p class="text-gray-400 text-sm">{{ award.org }}</p>
+            <div class="relative border-l border-gray-700 ml-3">
+              <div
+                v-for="(award, index) in awards"
+                :key="index"
+                class="mb-8 ml-6"
+              >
+                <span
+                  class="absolute -left-[9px] flex items-center justify-center w-5 h-5 bg-gradient-to-r from-teal-500 to-green-700 rounded-full ring-4 ring-[#101010]"
+                ></span>
+                <p class="text-gray-400 text-sm">{{ award.date }}</p>
+                <h4 class="font-bold text-white">
+                  <a :href="award.link" target="_blank" class="hover:text-teal-400 transition-colors">
+                    {{ award.title }}
+                  </a>
+                </h4>
+                <p class="text-gray-400 text-sm">{{ award.org }}</p>
+              </div>
             </div>
           </div>
         </div>
