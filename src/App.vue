@@ -44,7 +44,7 @@
     </transition>
 
     <!-- Navbar -->
-    <nav class="hidden md:flex w-full justify-center mt-6 z-10" >
+    <nav class="hidden md:flex w-full justify-center mt-12 z-10" >
       <ul class="flex flex-wrap gap-3">
         <!-- Home -->
         <li>

@@ -24,7 +24,7 @@
 
         <!-- Descripción -->
         <div class="col-span-2">
-          <h3 class="text-xl font-semibold mb-2">Quien soy yo ?</h3>
+          <h3 class="text-xl font-semibold mb-2">¿Quién soy yo?</h3>
           <p class="text-gray-300 mb-6 leading-relaxed text-justify">
             Soy desarrollador web Full-Stack con experiencia en la creación de aplicaciones 
             modernas, enfocadas en rendimiento y usabilidad. Me apasiona transformar ideas 
@@ -54,6 +54,11 @@
               </div>
             </div>
 
+            
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="space-y">
             <!-- Email -->
             <div class="flex items-center p-4 rounded-lg shadow-md">
               <div class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-md">
@@ -72,39 +77,6 @@
               <div class="ml-4">
                 <p class="text-gray-400 text-sm">Email</p>
                 <p class="text-white font-semibold">ulisesrodriguezbar@gmail.com</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Columna derecha -->
-          <div class="space-y">
-            <!-- Location -->
-            <div class="flex items-center p-4 rounded-lg shadow-md">
-              <div class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-md">
-                <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" stroke-width="2"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zm0-7c-3.866 0-7 3.134-7 7 0 4.418 7 11 7 11s7-6.582 7-11c0-3.866-3.134-7-7-7z" />
-                </svg>
-              </div>
-              <div class="ml-4">
-                <p class="text-gray-400 text-sm">Ubicación</p>
-                <p class="text-white font-semibold">Xalapa, Veracruz</p>
-              </div>
-            </div>
-
-            <!-- Birthday -->
-            <div class="flex items-center p-4 rounded-lg shadow-md">
-              <div class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-md">
-                <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" stroke-width="2"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div class="ml-4">
-                <p class="text-gray-400 text-sm">Cumpleaños</p>
-                <p class="text-white font-semibold">Feb 12, 1993</p>
               </div>
             </div>
           </div>
@@ -151,7 +123,7 @@
                         <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/>
                     </svg>
                 </div>
-                <h3 class="text-white text-lg font-semibold mb-2">Diseño y UX/UI</h3>
+                <h3 class="text-white text-lg font-semibold mb-2">Diseño UX/UI</h3>
                 <ul class="text-sm text-gray-400 text-center md:text-left space-y-2">
                     <li>✔️ Consultoría en experiencia de usuario</li>
                     <li>✔️ Revisión de flujos de navegación</li>
@@ -168,10 +140,11 @@
                         <path d="m19 9-5 5-4-4-3 3"/>
                     </svg>
                 </div>
-                <h3 class="text-white text-lg font-semibold mb-2">Optimización y Marketing</h3>
+                <h3 class="text-white text-lg font-semibold mb-2">Optimización</h3>
                 <ul class="text-sm text-gray-400 text-center md:text-left space-y-2">
-                    <li>✔️ SEO técnico (metadatos, sitemap, robots.txt)  </li>
                     <li>✔️ Optimización de contenido y estructura web </li>
+                    <li>✔️ Optimización de velocidad y rendimiento </li>
+                    <li>✔️ SEO técnico (metadatos, sitemap, robots.txt)  </li>
                 </ul>
             </div>
 
@@ -184,10 +157,9 @@
                     </svg>
 
                 </div>
-                <h3 class="text-white text-lg font-semibold mb-2">Servicios Técnicos</h3>
+                <h3 class="text-white text-lg font-semibold mb-2">Servicios Webs</h3>
                 <ul class="text-sm text-gray-400 text-center md:text-left space-y-2">
-                    <li>✔️ Mantenimiento y soporte web    </li>
-                    <li>✔️ Optimización de velocidad y rendimiento </li>
+                    <li>✔️ Mantenimiento y soporte web </li>
                     <li>✔️ Integraciones con APIs externas</li>
                 </ul>
             </div>
