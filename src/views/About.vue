@@ -157,7 +157,7 @@
                     </svg>
 
                 </div>
-                <h3 class="text-white text-lg font-semibold mb-2">Servicios Webs</h3>
+                <h3 class="text-white text-lg font-semibold mb-2">Servicios Web</h3>
                 <ul class="text-sm text-gray-400 text-center md:text-left space-y-2">
                     <li>✔️ Mantenimiento y soporte web </li>
                     <li>✔️ Integraciones con APIs externas</li>
