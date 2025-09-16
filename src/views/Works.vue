@@ -91,6 +91,16 @@ const portfolio = ref([
     title: 'Landing Tea + Tea',
     image: '/tea.png',
     link: 'https://teaplustea.netlify.app/'
+  },
+  {
+    title: 'Landing Laksmi Accesorios',
+    image: '/lasksmi.png',
+    link: 'https://laksmishop.netlify.app/'
+  },
+  {
+    title: 'Landig congreso Itsm 2019',
+    image: '/congreso.png',
+    link: 'https://congresoitsm2019.netlify.app/'
   }
 ]);
 </script>
