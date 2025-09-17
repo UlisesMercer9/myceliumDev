@@ -70,7 +70,8 @@
           <form
             name="contact"
             method="POST"
-            netlify
+            data-netlify="true"
+            @submit.prevent="handleSubmit"
             class="space-y-4"
           >
             <!-- Campo oculto requerido por Netlify -->
@@ -78,27 +79,27 @@
 
             <div>
               <label class="block text-sm mb-1 text-white">Nombre *</label>
-              <input type="text" name="name"
+              <input v-model="form.name" type="text" name="name"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Email *</label>
-              <input type="email" name="email"
+              <input v-model="form.email" type="email" name="email"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Mensaje *</label>
-              <textarea rows="4" name="message"
+              <textarea v-model="form.message" rows="4" name="message"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required></textarea>
             </div>
 
             <button type="submit"
-              class="px-6 py-2 bg-gradient-to-r from-teal-500 to-green-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-green-800 rounded-lg shadow-md font-semibold text-white cursor-pointer">
+              class="px-6 py-2 bg-gradient-to-r from-teal-500 to-green-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-green-800 rounded-lg shadow-md font-semibold text-white">
               Enviar
             </button>
           </form>
