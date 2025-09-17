@@ -70,8 +70,7 @@
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
-            @submit.prevent="handleSubmit"
+            netlify
             class="space-y-4"
           >
             <!-- Campo oculto requerido por Netlify -->
@@ -79,21 +78,21 @@
 
             <div>
               <label class="block text-sm mb-1 text-white">Nombre *</label>
-              <input v-model="form.name" type="text" name="name"
+              <input type="text" name="name"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Email *</label>
-              <input v-model="form.email" type="email" name="email"
+              <input type="email" name="email"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Mensaje *</label>
-              <textarea v-model="form.message" rows="4" name="message"
+              <textarea rows="4" name="message"
                 class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required></textarea>
             </div>
