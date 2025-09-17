@@ -69,37 +69,37 @@ import { ref } from 'vue';
 const portfolio = ref([
   {
     title: 'Life Beyond Work',
-    image: '/beyond.png',
+    image: '/images/proyects/beyond.png',
     link: 'https://my.lifebeyondwork.com/'
   },
   {
     title: 'ITICS',
-    image: '/ITICS.png',
+    image: '/images/proyects/ITICS.png',
     link: 'https://ingentecnologias.com/'
   },
   {
     title: 'Landing Bolsa de Trabajo',
-    image: '/trabajobr.png',
+    image: '/images/proyects/trabajobr.png',
     link: 'https://landingbolsatrabajobr.netlify.app/'
   },
   {
     title: 'Landing Head Hunter',
-    image: '/hunter.png',
+    image: '/images/proyects/hunter.png',
     link: 'https://headhunterbr.netlify.app/'
   },
   {
     title: 'Landing Tea + Tea',
-    image: '/tea.png',
+    image: '/images/proyects/tea.png',
     link: 'https://teaplustea.netlify.app/'
   },
   {
     title: 'Landing Laksmi Accesorios',
-    image: '/lasksmi.png',
+    image: '/images/proyects/lasksmi.png',
     link: 'https://laksmishop.netlify.app/'
   },
   {
     title: 'Landig congreso Itsm 2019',
-    image: '/congreso.png',
+    image: '/images/proyects/congreso.png',
     link: 'https://congresoitsm2019.netlify.app/'
   }
 ]);

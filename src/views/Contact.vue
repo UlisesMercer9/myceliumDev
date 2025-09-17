@@ -13,9 +13,9 @@
       <!-- Contenedor principal -->
       <div class="grid grid-cols-1 md:grid-cols-3 md:gap-8">
 
-        <!-- Columna izquierda: Info -->
+        <!-- Columna izquierda -->
         <div class="space-y-8">
-          <!-- Phone -->
+          <!-- Teléfono -->
           <div class="flex items-start space-x-4 bg-zinc-900 p-5 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -43,7 +43,7 @@
             </div>
           </div>
 
-          <!-- Address -->
+          <!-- Dirección -->
           <div class="flex items-start space-x-4 bg-zinc-900 p-5 rounded-xl">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-300 mb-4"
               fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -60,41 +60,94 @@
         </div>
 
         <!-- Columna derecha: Formulario -->
-        <div
-          class="bg-[#101010] text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10 md:mb-0 mb-5">
+        <div class="bg-[#101010] text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10 md:mb-0 mb-5">
           <p class="text-lg mb-8 text-white">
             Siempre estoy abierto a discutir
             <span class="font-bold">trabajos o asociaciones de diseño de productos.</span>
           </p>
 
-          <form class="space-y-4">
+          <!-- Formulario con confirmación -->
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            @submit.prevent="handleSubmit"
+            class="space-y-4"
+          >
+            <!-- Campo oculto requerido por Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+
             <div>
               <label class="block text-sm mb-1 text-white">Nombre *</label>
-              <input type="text"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500" />
+              <input v-model="form.name" type="text" name="name"
+                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+                required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Email *</label>
-              <input type="email"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500" />
+              <input v-model="form.email" type="email" name="email"
+                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+                required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Mensaje *</label>
-              <textarea rows="4"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"></textarea>
+              <textarea v-model="form.message" rows="4" name="message"
+                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+                required></textarea>
             </div>
 
             <button type="submit"
-              class="px-6 py-2 bg-teal-600 hover:bg-teal-700 rounded-lg shadow-md font-semibold text-white">
+              class="px-6 py-2 bg-gradient-to-r from-teal-500 to-green-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-green-800 rounded-lg shadow-md font-semibold text-white cursor-pointer">
               Enviar
             </button>
           </form>
+
+          <!-- Mensaje de confirmación -->
+          <p v-if="successMessage" class="mt-4 text-green-400 font-semibold">
+            {{ successMessage }}
+          </p>
+          <p v-if="errorMessage" class="mt-4 text-red-400 font-semibold">
+            {{ errorMessage }}
+          </p>
         </div>
       </div>
-
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref } from "vue";
+
+const form = ref({
+  name: "",
+  email: "",
+  message: "",
+});
+
+const successMessage = ref("");
+const errorMessage = ref("");
+
+const handleSubmit = async () => {
+  const formData = new FormData();
+  formData.append("form-name", "contact");
+  formData.append("name", form.value.name);
+  formData.append("email", form.value.email);
+  formData.append("message", form.value.message);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      body: formData,
+    });
+    successMessage.value = "¡Gracias por tu mensaje! Te responderé pronto.";
+    errorMessage.value = "";
+    form.value = { name: "", email: "", message: "" }; // limpiar campos
+  } catch (err) {
+    errorMessage.value = "Hubo un error al enviar el mensaje. Intenta de nuevo.";
+    successMessage.value = "";
+  }
+};
+</script>
 

@@ -20,9 +20,14 @@
           <!-- Experiencia -->
           <div>
             <h3 class="flex items-center text-xl font-semibold mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 17v-2h6v2h5V7H4v10h5zm2-8h2v2h-2V9z" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-500 mr-2 lucide lucide-building2-icon lucide-building-2">
+                <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/>
+                <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/>
+                <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+                <path d="M10 6h4"/>
+                <path d="M10 10h4"/>
+                <path d="M10 14h4"/>
+                <path d="M10 18h4"/>
               </svg>
               Experiencia
             </h3>
@@ -45,11 +50,10 @@
           <!-- Educación -->
           <div>
             <h3 class="flex items-center text-xl font-semibold mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-500 mr-2 lucide lucide-graduation-cap-icon lucide-graduation-cap">
+                <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+                <path d="M22 10v6"/>
+                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
               </svg>
               Educación
             </h3>
@@ -72,9 +76,12 @@
           <!-- Logros -->
           <div>
             <h3 class="flex items-center text-xl font-semibold mb-6">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-teal-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4M7.5 21h9l-4.5-9L7.5 21zM12 3v6m0 0L9 6m3 3l3-3" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-teal-500 mr-2 lucide lucide-trophy-icon lucide-trophy">
+                <path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 21.978"/>
+                <path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 21.978"/>
+                <path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/>
+                <path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/>
+                <path d="M6 9H4.5a1 1 0 0 1 0-5H6"/>
               </svg>
               Logros
             </h3>

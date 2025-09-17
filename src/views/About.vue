@@ -15,7 +15,7 @@
         <!-- Imagen -->
         <div class="flex justify-center md:justify-start">
           <img
-            src="/yop.jpg"
+            src="/images/profile/yop.jpg"
             alt="Profile"
             class="rounded-lg shadow-lg"
             width="400" height="400"

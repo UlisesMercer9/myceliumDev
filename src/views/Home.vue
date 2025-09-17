@@ -8,7 +8,7 @@
                 to="/about"
                 class="w-80 h-80 rounded-full overflow-hidden border-4 border-teal-500"
             >
-                <img src="/yop.jpg" alt="Profile" class="w-full h-full object-cover" />
+                <img src="/images/profile/yop.jpg" alt="Profile" class="w-full h-full object-cover" />
             </router-link>
 
             <!-- Nombre y título -->
@@ -57,7 +57,8 @@
 
             <!-- Botón de descarga -->
             <a
-                href="#"
+                href="/pdf/CV_UlisesRodriguez.pdf"
+                download
                 class="mt-8 px-6 py-3 bg-gradient-to-r from-teal-500 to-green-700 text-white font-medium rounded-full shadow-lg flex items-center space-x-2"
             >
                 <svg
