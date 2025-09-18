@@ -7,6 +7,7 @@ import Resume from '../views/Resume.vue'
 import Works from '../views/Works.vue'
 import Blogs from '../views/Blogs.vue'
 import Contact from '../views/Contact.vue'
+import Thanks from '../views/Thanks.vue'
 
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
   { path: '/works', name: 'Works', component: Works },
   { path: '/blogs', name: 'Blogs', component: Blogs },
   { path: '/contact', name: 'Contact', component: Contact },
+  { path: '/thanks', name: 'Thanks', component: Thanks }
 ]
 
 const router = createRouter({

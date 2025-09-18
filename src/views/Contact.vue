@@ -66,12 +66,12 @@
             <span class="font-bold">trabajos o asociaciones de diseño de productos.</span>
           </p>
 
-          <!-- Formulario con confirmación -->
+          <!-- Formulario directo Netlify con redirección -->
           <form
             name="contact"
             method="POST"
             data-netlify="true"
-            @submit.prevent="handleSubmit"
+            action="/thanks"
             class="space-y-4"
           >
             <!-- Campo oculto requerido por Netlify -->
@@ -79,22 +79,22 @@
 
             <div>
               <label class="block text-sm mb-1 text-white">Nombre *</label>
-              <input v-model="form.name" type="text" name="name"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+              <input type="text" name="name"
+                class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Email *</label>
-              <input v-model="form.email" type="email" name="email"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+              <input type="email" name="email"
+                class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Mensaje *</label>
-              <textarea v-model="form.message" rows="4" name="message"
-                class="w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
+              <textarea rows="4" name="message"
+                class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
                 required></textarea>
             </div>
 
@@ -103,51 +103,10 @@
               Enviar
             </button>
           </form>
-
-          <!-- Mensaje de confirmación -->
-          <p v-if="successMessage" class="mt-4 text-green-400 font-semibold">
-            {{ successMessage }}
-          </p>
-          <p v-if="errorMessage" class="mt-4 text-red-400 font-semibold">
-            {{ errorMessage }}
-          </p>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script setup>
-import { ref } from "vue";
-
-const form = ref({
-  name: "",
-  email: "",
-  message: "",
-});
-
-const successMessage = ref("");
-const errorMessage = ref("");
-
-const handleSubmit = async () => {
-  const formData = new FormData();
-  formData.append("form-name", "contact");
-  formData.append("name", form.value.name);
-  formData.append("email", form.value.email);
-  formData.append("message", form.value.message);
-
-  try {
-    await fetch("/", {
-      method: "POST",
-      body: formData,
-    });
-    successMessage.value = "¡Gracias por tu mensaje! Te responderé pronto.";
-    errorMessage.value = "";
-    form.value = { name: "", email: "", message: "" }; // limpiar campos
-  } catch (err) {
-    errorMessage.value = "Hubo un error al enviar el mensaje. Intenta de nuevo.";
-    successMessage.value = "";
-  }
-};
-</script>
 
