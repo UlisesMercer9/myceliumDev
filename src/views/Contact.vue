@@ -4,9 +4,11 @@
     <div class="max-w-6xl w-full rounded-2xl shadow-lg p-10 bg-[#101010]">
 
       <!-- Título -->
-      <h2 class="text-3xl font-bold inline-block pb-1 mb-10 
+      <h2
+        class="text-3xl font-bold inline-block pb-1 mb-10 
           border-b-4 border-transparent 
-          bg-gradient-to-r from-teal-500 to-green-700 bg-[length:100%_4px] bg-no-repeat bg-bottom">
+          bg-gradient-to-r from-teal-500 to-green-700 bg-[length:100%_4px] bg-no-repeat bg-bottom"
+      >
         Contacto
       </h2>
 
@@ -60,18 +62,19 @@
         </div>
 
         <!-- Columna derecha: Formulario -->
-        <div class="bg-[#101010] text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10 md:mb-0 mb-5">
+        <div
+          class="bg-[#101010] text-zinc-600 rounded-xl border p-6 col-span-2 md:ml-10 md:mt-0 mt-10 md:mb-0 mb-5">
           <p class="text-lg mb-8 text-white">
             Siempre estoy abierto a discutir
             <span class="font-bold">trabajos o asociaciones de diseño de productos.</span>
           </p>
 
-          <!-- Formulario directo Netlify con redirección -->
+          <!-- Formulario directo Netlify sin redirección -->
           <form
             name="contact"
             method="POST"
             data-netlify="true"
-            action="/thanks"
+            @submit.prevent="handleSubmit"
             class="space-y-4"
           >
             <!-- Campo oculto requerido por Netlify -->
@@ -79,34 +82,80 @@
 
             <div>
               <label class="block text-sm mb-1 text-white">Nombre *</label>
-              <input type="text" name="name"
+              <input
+                type="text"
+                name="name"
+                v-model="form.name"
                 class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
-                required />
+                required
+              />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Email *</label>
-              <input type="email" name="email"
+              <input
+                type="email"
+                name="email"
+                v-model="form.email"
                 class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
-                required />
+                required
+              />
             </div>
 
             <div>
               <label class="block text-sm mb-1 text-white">Mensaje *</label>
-              <textarea rows="4" name="message"
+              <textarea
+                rows="4"
+                name="message"
+                v-model="form.message"
                 class="text-white w-full px-4 py-2 bg-transparent border-b border-gray-600 focus:outline-none focus:border-teal-500"
-                required></textarea>
+                required
+              ></textarea>
             </div>
 
-            <button type="submit"
-              class="px-6 py-2 bg-gradient-to-r from-teal-500 to-green-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-green-800 rounded-lg shadow-md font-semibold text-white">
+            <button
+              type="submit"
+              class="px-6 py-2 bg-gradient-to-r from-teal-500 to-green-700 hover:bg-gradient-to-r hover:from-teal-600 hover:to-green-800 rounded-lg shadow-md font-semibold text-white"
+            >
               Enviar
             </button>
+
+            <!-- Mensaje de éxito -->
+            <p v-if="success" class="text-green-500 mt-4 font-medium">
+              ✅ ¡Gracias! Tu mensaje ha sido enviado.
+            </p>
           </form>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: { name: "", email: "", message: "" },
+      success: false,
+    };
+  },
+  methods: {
+    async handleSubmit(e) {
+      const formData = new FormData(e.target);
+      try {
+        await fetch("/", {
+          method: "POST",
+          body: formData,
+        });
+        this.success = true;
+        this.form = { name: "", email: "", message: "" }; // limpiar
+      } catch (error) {
+        console.error("Error al enviar formulario:", error);
+      }
+    },
+  },
+};
+</script>
+
 
 
